@@ -54,6 +54,7 @@ int main()
             if(i==size)
             {
                 check=false;
+                break;
             }
             sum+=arr[i];
             i++;
@@ -62,8 +63,7 @@ int main()
         {
             count++;
         }
-        
-
+    
     }
     if(count == 0)
     {
