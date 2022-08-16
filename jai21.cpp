@@ -73,5 +73,81 @@ int main()
  //same highest average level, they all need to be selected.
 }
 
+
+
+int compare(string s1,string s2)
+{
+    int i=0;
+    bool check=false;
+    int x;
+    x = s1.length()*s2.length();
+    while(s1[i] != '\0')
+    {
+        int j=0;
+        while(s2[j] != '\0')
+        {
+            if(s1[i] == s2[j])
+            {
+                check=true;
+                break;
+            }
+            j++;
+        }
+        if(check){break;}
+        i++;
+    }
+    if(check){
+        return 0;
+    }
+    return x;
+
+
+}
+int main()
+{
+    // argc gfds scxasd qwet
+    string s;
+
+    getline(cin,s);
+    
+    string s1[10];
+    int size1=0;
+    string word = "";
+
+    for (auto x : s) 
+    {
+        if (x == ' ')
+        {
+            s1[size1++]=word;
+            word = "";
+        }
+        else {
+            word = word + x;
+        }
+    }
+    s1[size1++]=word;
+    int c,max=-1;
+    for(int i=0;i<size1-1;i++)
+    {
+        for(int j=i+1;j<size1;j++)
+        {
+            c = compare(s1[i],s1[j]);
+            if(c>max)
+            {
+                max=c;
+            }
+        }
+    }
+    cout<<max;
+
+}
+
 */
 
+int main()
+{
+    int z=10;
+    register int *x=&z;
+    //int *y=&x;
+    cout<<x;
+}
